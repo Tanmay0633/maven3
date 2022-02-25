@@ -3,10 +3,11 @@ pipeline {
   stages {
   stage('maven-install') {
     steps {
-      withMaven(globalMavenSettingsConfig: 'null', jdk: 'null', maven: 'Maven3', mavenSettingsConfig: 'null') {
+      withMaven(globalMavenSettingsConfig: 'null', jdk: 'My-JDK', maven: 'Maven3', mavenSettingsConfig: 'null') {
     sh 'mvn clean install'
+}
 }
     }
 } 
 }
-}
+
